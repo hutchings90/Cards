@@ -47,7 +47,11 @@ function shuffle(arr) {
 ////////////////////////////////////////////////////////////////
 // Testing functions
 function assertEquals(a, b, m) {
-	console.assert(a === b, m);
+	console.assert(a === b, m || a + ' is not ' + b + '.');
+}
+
+function assertPropertyEquals(o, key, val) {
+	assertEquals(o[key], val);
 }
 
 function assertArrayEquals(arr1, arr2, itemLabel, arrLabel, checkOrder) {

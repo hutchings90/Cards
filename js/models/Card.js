@@ -3,11 +3,11 @@ function Card(name, imageSrc) {
 	this.imageSrc = imageSrc;
 }
 
-// Test for Card
+// Test Card
 (function() {
 	var name = 'TestName';
 	var imageSrc = 'TestSrc';
 	var card = new Card(name, imageSrc);
-	console.assert(card.name === name);
-	console.assert(card.imageSrc === imageSrc);
+	assertPropertyEquals(card, 'name', name);
+	assertPropertyEquals(card, 'imageSrc', imageSrc);
 })();
